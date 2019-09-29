@@ -1,0 +1,71 @@
+-= MBC Tester V1.0 =-
+by HyperHacker
+
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+-@@@@@@1. What is it?@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-
+-@                                                                           @-
+-@ This is a simple test ROM I slapped together out of boredom. It reads one @-
+-@ byte from every bank in the ROM from 1 to 255 (0 not being necessary; if  @-
+-@ it doesn't work it ain't gonna run) and checks if the data is read        @-
+-@ correctly. What's the purpose of this you ask? To test MBC chips, DIY     @-
+-@ flashcarts, hardware hacks, etc. You'll easily be able to see if          @-
+-@ everything's working properly. Simply put it on a ROM and run it!         @-
+-@                                                                           @-
+-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+-@@@@@@2. How do I use it?@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-
+-@                                                                           @-
+-@ Assemble the source code (see the comments for details) and put it on a   @-
+-@ ROM chip of some sort. The program will sequentially test each bank of    @-
+-@ the ROM to see if it's accessible. The results will be displayed in a     @-
+-@ 16x16 grid on the screen. A checkmark indicates the bank was accessed     @-
+-@ successfully, an F means it failed. The top row of numbers (Y axis) is    @-
+-@ the second digit and the side (X axis) is the first digit (in             @-
+-@ hexadecimal). After testing all 255 banks, there will be a delay of about @-
+-@ 20 seconds, then the ROM will reset and test the banks again. Please note @-
+-@ that there is an irregularity caused by the fact that bank 0 is not       @-
+-@ tested. When you get the bank number from the grid, you must add one to   @-
+-@ get the actual number.                                                    @-
+-@                                                                           @-
+-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+-@@@@@@3. Contact Info@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-
+-@                                                                           @-
+-@ Email=micros0ft_hater255@yahoo.ca                  AIM=Hyp3rHax0r         @-
+-@ MSN=pika98765@hotmail.com                                                 @-
+-@ Find me at...                                                             @-
+-@ acmlm.overclocked.org     www.gscentral.com     www.developerfusion.com   @-
+-@ www.dextrose.com
+          www.cheatandwin.com   www.amarok-shadow.com
+     @-
+-@                                                                           @-
+-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Version 1.0, created Dec 30 2003
+Designed for tniASM V0.3
+
+###############################################################
+#                                                             #
+#     * *  * *  ***  ***  ***  * *   *    ***  *  *  ***  *** #
+#    * *  * *  * *  *    * *  * *  * *  *     * *   *    * *  #
+#   ***   *   ***  **   ***  ***  ***  *     **    **   ***   #
+#  * *   *   *    *    **   * *  * *  *     * *   *    **     #
+# * *   *   *    ***  * *  * *  * *   ***  *  *  ***  * *     #
+#                                                             #
+###############################################################
+                              ###
+                              ###
+                              ###
+                              ###
+                              ###
+                              ###
+                              ###
+                              ###
+                              ###
+                              ###
+                            \\###//
